@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "ProximaNova";
+    src: url("https://media-assets.swiggy.com/dls-web-assets/dls/fonts/ProximaNovaCond-Black.woff2");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "ProximaNova";
+    src: url("https://media-assets.swiggy.com/dls-web-assets/dls/fonts/ux3/700.woff2");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "ProximaNova";
+    src: url("https://media-assets.swiggy.com/dls-web-assets/dls/fonts/ux3/600.woff2");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "ProximaNova";
+    src: url("https://media-assets.swiggy.com/dls-web-assets/dls/fonts/ux3/500.woff2");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "ProximaNova";
+    src: url("https://media-assets.swiggy.com/dls-web-assets/dls/fonts/ux3/300.woff2");
+    font-weight: 300;
+}

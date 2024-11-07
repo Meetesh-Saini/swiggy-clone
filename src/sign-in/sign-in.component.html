@@ -1,0 +1,39 @@
+<div *ngIf="show" (click)="close()" class="bg-blue-900 opacity-40 fixed w-screen h-screen z-10 top-0 left-0"></div>
+
+<div *ngIf="show" class="fixed h-screen bg-white right-0 px-6 py-4 font-proxima top-0 z-10 w-96">
+  <ng-icon name="heroXMark" (click)="close()"  class="cursor-pointer scale-150 mb-8"></ng-icon>
+  <div class="flex justify-between h-16 gap-8">
+    <div>
+      <p class="text-2xl font-semibold">
+        <ng-container *ngIf="login; else notLoggedInHead">
+          Login
+        </ng-container>
+        <ng-template #notLoggedInHead>
+          Sign Up
+        </ng-template>
+      </p>
+      <p class="text-sm hover:cursor-pointer">or
+        <span (click)="toggleLogin()" *ngIf="login; else notLoggedIn" class="hover:underline text-orange-600">
+          create an account
+        </span>
+        <ng-template #notLoggedIn>
+          <span (click)="toggleLogin()" class="hover:underline text-orange-600">login to your account</span>
+        </ng-template>
+      </p>
+    </div>
+    <img class="scale-[1]" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r">
+  </div>
+
+  <input type="phone" [(ngModel)]="phone" placeholder="Phone" id="u-phone" class="border outline-none border-gray-500 p-2 block">
+  <input *ngIf="!login" [(ngModel)]="name" type="text" placeholder="Name" id="u-name" class="border outline-none border-gray-500 p-2 block">
+  <input *ngIf="!login" [(ngModel)]="email" type="email" placeholder="Email" id="u-email" class="border outline-none border-gray-500 p-2 block">
+
+  <button (click)="submitForm()" class="bg-orange-600 w-full py-4 mt-3 text-white">
+    <ng-container *ngIf="login; else notLoggedInBtn">
+      Login
+    </ng-container>
+    <ng-template #notLoggedInBtn>
+      Sign Up
+    </ng-template>
+  </button>
+</div>
